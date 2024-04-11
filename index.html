@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tax Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h2>Tax Calculator</h2>
+    <form id="taxForm">
+     
+        <div class="form-group">
+            <label for="income">Gross Annual Income:</label>
+            <input type="text" id="income" required>
+            <span class="error-icon" id="incomeError">!</span>
+            <div class="tooltip" id="incomeTooltip">Please enter a valid income</div>
+        </div>
+        <div class="form-group">
+            <label for="extraIncome">Extra Income:</label>
+            <input type="text" id="extraIncome">
+            <span class="error-icon" id="extraIncomeError">!</span>
+            <div class="tooltip" id="extraIncomeTooltip">Please enter a valid extra income</div>
+        </div>
+        <div class="form-group">    
+            <label for="deductions">Deductions:</label>
+            <input type="text" id="deductions">
+            <span class="error-icon" id="deductionsError">!</span>
+            <div class="tooltip" id="deductionsTooltip">Please enter a valid deductions</div>
+        </div>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <select id="age" required>
+                <option value="" disabled selected>Select Age Group</option>
+                <option value="below40">Below 40</option>
+                <option value="40to60">40 to 60</option>
+                <option value="above60">Above 60</option>
+            </select>
+            <span class="error-icon" id="ageError">!</span>
+            <div class="tooltip" id="ageTooltip">Age group is required</div>
+        </div>
+        <button type="submit">Calculate Tax</button>
+    </form>
+</div>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <!-- <span class="close">&times;</span> -->
+        <div id="result" class="result"></div>
+        <button class="close">close</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
